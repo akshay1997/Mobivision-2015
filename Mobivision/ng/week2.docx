@@ -1,0 +1,44 @@
+﻿  MULTIPLE FEATURES IN A LINEAR REGRESSION
+
+Linear regression with multiple variables is also known as "multivariate linear regression".There are n features instead of just 1 (as in linear regression).
+So the hypothesis equation involves (x1,x2,.....,xn).
+So the hypothesis can be written as 
+
+h(x) = Q0+Q1x1+Q2x2+........+Qnxn
+
+or it can be written in the matrix form as Q'x.
+
+GRADIENT DESCENT FOR MULTIPLE VARIABLES
+
+The gradient descent equation itself is generally the same form; we just have to repeat it for our 'n' features . 
+
+
+
+We can speed up gradient descent by having each of our input values in roughly the same range. This is because θ will descend quickly on small ranges and slowly on large ranges, and so will oscillate inefficiently down to the optimum when the variables are very uneven.
+What this does is it gets all the all input variables into roughly one of these ranges.
+
+We have two techniques to help with this.
+1)Feature Scaling - Feature scaling involves dividing the input values by the range (i.e. the maximum value minus the minimum value) of the input variable, resulting in a new range of just 1. 
+2)Mean Normalization - Mean normalization involves subtracting the average value for an input variable from the values for that input variable resulting in a new average value for the input variable of just zero.
+
+
+ANOTHER WAY OF MINIMIZING J IS NORMAL EQUATION  METHOD.
+
+In the "Normal Equation" method, we will minimize J by explicitly taking its derivatives with respect to the θj ’s, and setting them to zero. This allows us to find the optimum theta without iteration. It takes very less time to compute theta as compared to the gradient descent method . But for large numbr of features 
+normal equation method would be very costly .. 
+
+DIFFERENCE BETWEEN  GRADIENT DESCENT AND NORMAL EQUATION METHOD
+
+
+Gradient Descent
+Normal Equation
+Need to choose alpha
+No need to choose alpha
+Needs many iterations
+No need to iterate
+O (kn^2)
+O (n^3), need to calculate inverse of  X'X
+Works well when n is large
+Slow if n is very large
+
+

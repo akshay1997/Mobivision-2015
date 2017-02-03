@@ -1,0 +1,40 @@
+﻿		WEEK 3 – LOGISTIC REGRESSION
+
+
+WHY CAN'T WE USE LINEAR REGRESSION FOR CLASSIFICATION PROBLEMS
+
+Linear Regression can't be used in case of classificaton problems because y = 0 or 1
+(in case of classification problems). Using Linear Regression can sometimes have 
+hypothesis (h(x)) attaining values which are greater than 1 or less than 0.
+Therefore we use what is called Logistic Regression in case of classification problems.
+On the other hand the prediction (logistic regression) of the hypothesis is always between 0 and 1.
+
+HYPOTHESIS REPRESENTATION OF A LOGISTIC REGRESSION
+
+The hypothesis is represented as a sigmoid function with input Q'x.
+h(y=0|x belongs to theta) + h(y=1|x belongs to theta) = 1
+
+DECISION BOUNDARY
+
+Decision Boundary is what seperates the y=0 region with the y = 1 region.
+Decision Boundary is derived just from the theta vector and not from the training 
+set. Decision Boundary can take various shapes on the basis of complexity 
+of the hypothesis function. Eg: Linear,Circular and many more.So the region inside the circle would represent the y = 1 rgion and y = 0 region lies outside of it.
+
+HOW TO FIT THE PARAMETERS THETA IN ORDER TO CALCULATE THE DECISION
+BOUNDARY 
+
+We cannot use the same cost function that we use for linear regression because the Logistic Function will cause the output to be wavy, causing many local optima. In other words, it will not be a convex function.
+If our correct answer 'y' is 0, then the cost function will be 0 if our hypothesis function also outputs 0. If our hypothesis approaches 1, then the cost function will approach infinity.
+MORE OPTIMISED ALGORITHMS TO CALCULATE THETA
+
+"Conjugate gradient", "BFGS", and "L-BFGS" are more sophisticated, faster ways to optimize θ that can be used instead of gradient descent.
+
+THE ONE VS ALL ALGORITHM
+
+When we have more than 1 categories , we use this algorithm.What we are basically doing is choosing one class and then lumping all the others into a single second class. We do this repeatedly, applying binary logistic regression to each case, and then use the hypothesis that returned the highest value as our prediction.
+
+
+
+
+
